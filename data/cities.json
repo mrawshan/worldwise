@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "cityName": "Navas de Estena",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-10T05:08:24.365Z",
+      "notes": "TEST",
+      "position": {
+        "lat": "39.554883059924016",
+        "lng": "-4.526367187500001"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Tomar",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2024-07-10T05:08:31.347Z",
+      "notes": "TEST2",
+      "position": {
+        "lat": "39.690280594818034",
+        "lng": "-8.371582031250002"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Muro en Cameros",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-10T05:12:25.991Z",
+      "notes": "dsmdc",
+      "position": {
+        "lat": "42.21224516288584",
+        "lng": "-2.5488281250000004"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Donvidas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-12T01:36:17.639Z",
+      "notes": "Test",
+      "position": {
+        "lat": "41.09591205639546",
+        "lng": "-4.7900390625"
+      },
+      "id": 4
+    }
+  ]
+}
