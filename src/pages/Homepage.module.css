@@ -43,3 +43,32 @@
 		font-size: 1.4rem;
 	}
 }
+
+@media screen and (min-width: 500px) {
+	.homepage {
+		height: calc(100vh - 5rem);
+	}
+}
+
+@media screen and (max-height: 500px) {
+	.homepage {
+		height: 500px;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.homepage h1 {
+		font-size: 2.5rem;
+	}
+
+	.homepage h2 {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.homepage {
+		margin: 1rem;
+		padding: 2.5rem 1rem;
+	}
+}

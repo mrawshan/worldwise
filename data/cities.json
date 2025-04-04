@@ -47,6 +47,18 @@
         "lng": "-4.7900390625"
       },
       "id": 4
+    },
+    {
+      "cityName": "La Parra de las Vegas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-09-26T05:01:50.443Z",
+      "notes": "Test3",
+      "position": {
+        "lat": "39.87601941962116",
+        "lng": "-2.1533203125000004"
+      },
+      "id": 5
     }
   ]
 }
