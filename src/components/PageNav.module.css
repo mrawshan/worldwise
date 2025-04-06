@@ -35,6 +35,79 @@ a.ctaLink:visited {
 
 /* Mobile nav styles */
 .mobNav {
-	height: 5.2rem;
-	float: right;
+	position: absolute;
+	right: 50px;
+	top: 36px;
+	width: 8rem !important;
+	height: 8rem !important;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+.mobileNavOverlay {
+	width: 100%;
+	height: 100%;
+	background-color: bisque;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	transition: all 0.5s;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* Media query */
+@media screen and (max-width: 800px) {
+	.mobNav {
+		display: block;
+	}
+
+	.nav {
+		display: inline-block;
+		width: 100%;
+		position: relative;
+	}
+
+	.nav ul {
+		display: none;
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+		margin-top: 150px;
+	}
+}
+
+@media screen and (max-height: 500px) {
+	.nav {
+		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.mobNav {
+		width: 7rem !important;
+		height: 7rem !important;
+	}
+
+	.mobNav {
+		top: 15px;
+		right: 14px;
+	}
+
+	.nav a:link,
+	.nav a:visited {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.nav ul {
+		gap: 2.5rem;
+	}
 }

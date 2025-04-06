@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Styles
@@ -7,13 +8,29 @@ import styles from './PageNav.module.css';
 import Logo from '../components/Logo';
 
 function PageNav() {
+	const [activeMobNav, setActiveMobNav] = useState(false);
+
 	return (
 		<>
-			<img className={styles.mobNav} src='/public/mobile-nav.gif' alt='' />
+			{/* Mobile nav button */}
+			<img
+				className={styles.mobNav}
+				onClick={() => setActiveMobNav((crrV) => !crrV)}
+				src='/public/mobile-nav.gif'
+				alt=''
+			/>
+
+			{/* Overlay for mobile nav menu */}
+			<div
+				className={`${styles.mobileNavOverlay} ${
+					activeMobNav ? '' : `${styles.hidden}`
+				}`}
+			></div>
+
 			<nav className={styles.nav}>
 				<Logo />
 
-				<ul>
+				<ul style={{ display: `${activeMobNav ? 'inline-flex' : ''}` }}>
 					<li>
 						<NavLink to='/pricing'>Pricing</NavLink>
 					</li>

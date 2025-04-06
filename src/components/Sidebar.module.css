@@ -8,3 +8,17 @@
 	align-items: center;
 	height: calc(100vh - 4.8rem);
 }
+
+/* Media query */
+@media screen and (max-width: 1000px) {
+	.sidebar {
+		flex-basis: unset;
+		padding: 3rem 3rem 3.5rem 3rem;
+	}
+}
+
+@media screen and (max-height: 520px) {
+	.sidebar {
+		height: 462px;
+	}
+}
