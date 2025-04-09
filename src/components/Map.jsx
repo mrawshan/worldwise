@@ -9,7 +9,7 @@ import {
 	useMapEvents,
 } from 'react-leaflet';
 
-// Custome hook
+// Custom hook
 import { useGeolocation } from '../hooks/useGeolocation';
 import { useUrlPosition } from '../hooks/useUrlPosition';
 
@@ -46,7 +46,7 @@ function Map() {
 		[mapLat, mapLng]
 	);
 
-	// Synchronizing the user cuurrent location with mapPosition
+	// Synchronizing the user current location with mapPosition
 	useEffect(
 		function () {
 			if (geolocationPosition)
@@ -91,14 +91,14 @@ function Map() {
 	);
 }
 
-// Custome component to move to the selected location on the map
+// Custom component to move to the selected location on the map
 function ChangeCenter({ position }) {
-	const map = useMap(); // useMap() hook is given by leaflet library (Getting the current instence of the map currently being displayed )
+	const map = useMap(); // useMap() hook is given by leaflet library (Getting the current instance of the map currently being displayed )
 	map.setView(position);
 	return null;
 }
 
-// Cuustome component to detect the click on the map (To pop up a form on click)
+// Custom component to detect the click on the map (To pop up a form on click)
 function DetectClick() {
 	// Here we are using useNavigate hook to move to the form
 	const navigate = useNavigate();

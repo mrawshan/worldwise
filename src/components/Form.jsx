@@ -20,7 +20,7 @@ import Spinner from './Spinner';
 // Context API
 import { useCities } from '../contexts/CitiesContext';
 
-// Function to convert the contryCode to an Emoji
+// Function to convert the countryCode to an Emoji
 export function convertToEmoji(countryCode) {
 	const codePoints = countryCode
 		.toUpperCase()
@@ -37,7 +37,7 @@ function Form() {
 	const [country, setCountry] = useState('');
 	const [date, setDate] = useState(new Date());
 	const [notes, setNotes] = useState('');
-	const [emoji, setImoji] = useState('');
+	const [emoji, setEmoji] = useState('');
 	const [geocodingError, setGeocodingError] = useState('');
 
 	// From useUrlPosition custom hook
@@ -46,7 +46,7 @@ function Form() {
 	// Consuming context value
 	const { createCity, isLoading } = useCities();
 
-	// Programatic navigation (To navigate after submit the form)
+	// Programmatic navigation (To navigate after submit the form)
 	const navigate = useNavigate();
 
 	// Reverse geocoding
@@ -54,7 +54,7 @@ function Form() {
 		function () {
 			if (!lat && !lng) return; // If the lat and lng is null then just return
 
-			async function fatchCityData() {
+			async function fetchCityData() {
 				try {
 					setIsLoadingGeocoding(true);
 					setGeocodingError('');
@@ -70,14 +70,14 @@ function Form() {
 
 					setCityName(data.city || data.locality || '');
 					setCountry(data.countryName);
-					setImoji(convertToEmoji(data.countryCode));
+					setEmoji(convertToEmoji(data.countryCode));
 				} catch (err) {
 					setGeocodingError(err.message);
 				} finally {
 					setIsLoadingGeocoding(false);
 				}
 			}
-			fatchCityData();
+			fetchCityData();
 		},
 		[lat, lng]
 	);
