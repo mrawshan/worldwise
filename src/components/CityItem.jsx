@@ -17,7 +17,11 @@ const formatDate = (date) =>
 function CityItem({ city }) {
 	// Consuming context value
 	const { currentCity, deleteCity } = useCities();
+
+	// Destructuring the city props
 	const { cityName, emoji, date, id, position } = city;
+
+	console.log(city);
 
 	// Handler click function
 	function handleClick(e) {
