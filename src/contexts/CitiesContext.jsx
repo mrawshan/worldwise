@@ -10,10 +10,10 @@ import {
 const BASE_URL = 'http://localhost:8000';
 
 // Context (Provider)
-const CitiestContext = createContext();
+const CitiesContext = createContext();
 
 // Initial state for the reducer hook
-const intialState = {
+const initialState = {
 	cities: [],
 	isLoading: false,
 	currentCity: {},
@@ -77,7 +77,7 @@ function reducer(crrState, action) {
 function CitiesProvider({ children }) {
 	const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
 		reducer,
-		intialState
+		initialState
 	);
 
 	// API call
@@ -162,7 +162,7 @@ function CitiesProvider({ children }) {
 
 	return (
 		// 2) Provide value to child components
-		<CitiestContext.Provider
+		<CitiesContext.Provider
 			value={{
 				cities,
 				isLoading,
@@ -174,13 +174,13 @@ function CitiesProvider({ children }) {
 			}}
 		>
 			{children}
-		</CitiestContext.Provider>
+		</CitiesContext.Provider>
 	);
 }
 
-// Custom corresponding hook (Basicaly to Consum the context value)
+// Custom corresponding hook (Basically to Consume the context value)
 function useCities() {
-	const context = useContext(CitiestContext);
+	const context = useContext(CitiesContext);
 	if (context === undefined)
 		throw new Error('CitiesContext was used outside the CitiesProvider');
 	return context;

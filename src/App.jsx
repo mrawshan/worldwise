@@ -9,7 +9,7 @@ import { lazy, Suspense } from 'react';
 // import AppLayout from './pages/AppLayout';
 // import PageNotFound from './pages/PageNotFound';
 
-// Optimizing Bundle Size With Code Splitting using (Lazy loading) on Pages
+// Optimizing Bundle Size With Code Splitting using (Lazy loading) on Pages (Splitting the JS bundle into multiple files)
 const Homepage = lazy(() => import('./pages/Homepage'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Product = lazy(() => import('./pages/Product'));

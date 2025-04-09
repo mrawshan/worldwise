@@ -6,7 +6,7 @@ import styles from './CityItem.module.css';
 // Context API related
 import { useCities } from '../contexts/CitiesContext';
 
-// Funtion to formate date
+// Function to formate date
 const formatDate = (date) =>
 	new Intl.DateTimeFormat('en', {
 		day: 'numeric',
@@ -19,7 +19,7 @@ function CityItem({ city }) {
 	const { currentCity, deleteCity } = useCities();
 	const { cityName, emoji, date, id, position } = city;
 
-	// Hnnadler click function
+	// Handler click function
 	function handleClick(e) {
 		e.preventDefault(); // By doing this we can prevent the Link open.
 		deleteCity(id);

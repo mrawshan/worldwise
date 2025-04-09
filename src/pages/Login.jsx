@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // Style
 import styles from './Login.module.css';
 
-// Componetns
+// Components
 import PageNav from '../components/PageNav';
 import Button from '../components/Button';
 
@@ -20,7 +20,7 @@ export default function Login() {
 	// Consuming context value
 	const { login, isAuthenticated } = useAuth();
 
-	// Programatic navigation (To navigate after submit the login form)
+	// Programmatic navigation (To navigate after submit the login form)
 	const navigate = useNavigate();
 
 	// Handle Login
@@ -33,7 +33,7 @@ export default function Login() {
 	// Checking if isAuthenticated is true
 	useEffect(
 		function () {
-			if (isAuthenticated) navigate('/app', { replace: true });
+			if (isAuthenticated) navigate('/app', { replace: true }); // { replace: true } If they press the back button, they won’t go back to the login page — because it was replaced in the browser’s history stack.
 		},
 		[isAuthenticated, navigate]
 	);

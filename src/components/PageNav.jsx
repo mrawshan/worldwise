@@ -17,7 +17,7 @@ function PageNav() {
 				className={styles.mobNav}
 				onClick={() => setActiveMobNav((crrV) => !crrV)}
 				src='/public/mobile-nav.gif'
-				alt=''
+				alt='Mobile Navigation'
 			/>
 
 			{/* Overlay for mobile nav menu */}

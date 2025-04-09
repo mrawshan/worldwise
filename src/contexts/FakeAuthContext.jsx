@@ -4,7 +4,7 @@ import { createContext, useContext, useReducer } from 'react';
 const AuthContext = createContext();
 
 // Initial state for the reducer hook
-const intialState = {
+const initialState = {
 	user: null,
 	isAuthenticated: false,
 };
@@ -43,7 +43,7 @@ const FAKE_USER = {
 function AuthProvider({ children }) {
 	const [{ user, isAuthenticated }, dispatch] = useReducer(
 		reducer,
-		intialState
+		initialState
 	);
 
 	// Login function
@@ -64,7 +64,7 @@ function AuthProvider({ children }) {
 	);
 }
 
-// Custom corresponding hook (Basicaly to Consum the context value)
+// Custom corresponding hook (Basically to Consume the context value)
 function useAuth() {
 	const context = useContext(AuthContext);
 	if (context === undefined)
